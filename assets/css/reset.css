@@ -1,0 +1,266 @@
+@charset "UTF-8";
+
+/**
+ * Modern Reset CSS (20-Year Front-End Veteran Custom Reset)
+ * --------------------------------------------------
+ * - 크로스 브라우징 및 최신 웹 표준을 고려한 완전한 스타일 리셋
+ * - 모바일, 태블릿, 데스크톱 반응형 환경 최적화
+ * - 한글 폰트 렌더링 최적화 및 접근성(A11y) 기본 유틸리티 포함
+ */
+
+/* 1. 박스 모델 계산 일관화 및 전역 마진/패딩 제거 */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* 2. HTML & Body 기본 설정 */
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  color: #222222;
+  background-color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, "Pretendard Variable", Pretendard, "Noto Sans KR", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  word-break: keep-all;
+  overflow-x: hidden;
+}
+
+/* 3. HTML5 시맨틱 블록 요소 명시 */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section {
+  display: block;
+}
+
+/* 4. 제목 및 텍스트 요소 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+p,
+blockquote,
+pre {
+  margin: 0;
+}
+
+/* 5. 링크 요소 */
+a {
+  color: inherit;
+  text-decoration: none;
+  background-color: transparent;
+  -webkit-tap-highlight-color: transparent;
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+/* 6. 목록 요소 */
+ol,
+ul,
+li {
+  list-style: none;
+}
+
+/* 7. 미디어 및 그래픽 요소 (반응형 기본화) */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+img {
+  border-style: none;
+  vertical-align: middle;
+}
+
+/* 8. 폼 컨트롤 요소 리셋 (브라우저 디폴트 UI 제거 및 폰트 상속) */
+input,
+button,
+textarea,
+select,
+optgroup {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  color: inherit;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+  vertical-align: middle;
+}
+
+input,
+button,
+select,
+textarea {
+  outline: none;
+}
+
+/* 모바일 폼 스타일 초기화 */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="url"],
+textarea,
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* 검색 인풋 x버튼 등 기본 스타일 제거 */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
+
+/* 숫자 인풋 화살표 제거 */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* 버튼 전용 리셋 */
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+button:disabled,
+input:disabled {
+  cursor: not-allowed;
+}
+
+/* 텍스트 영역 리사이즈 제어 */
+textarea {
+  resize: vertical;
+  overflow: auto;
+}
+
+/* 필드셋 & 레전드 */
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+legend {
+  display: table;
+  max-width: 100%;
+  white-space: normal;
+  color: inherit;
+}
+
+/* 9. 테이블 요소 */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+
+caption {
+  text-align: left;
+}
+
+th,
+td {
+  vertical-align: middle;
+}
+
+/* 10. 기타 서식 및 인용 요소 */
+address,
+cite,
+dfn,
+em,
+var,
+i {
+  font-style: normal;
+}
+
+b,
+strong {
+  font-weight: 700;
+}
+
+small {
+  font-size: 80%;
+}
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+  border: none;
+  border-top: 1px solid #e5e5e5;
+  margin: 0;
+}
+
+/* 11. 접근성(A11y) 유틸리티 - 스크린 리더용 숨김 텍스트 */
+.sr-only,
+.blind {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+/* 키보드 포커스 가시성 보장 */
+:focus-visible {
+  outline: 2px solid #0056b3;
+  outline-offset: 2px;
+}
